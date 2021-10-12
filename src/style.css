@@ -14,9 +14,8 @@ body {
 }
 
 nav {
-  background: rgb(132,139,30);
-  background: linear-gradient(319deg, rgba(132,139,30,1) 0%, rgba(100,108,20,1) 14%, rgba(18,33,6,1) 100%);
-  font-family: 'BreakingBad';
+  background: rgb(132, 139, 30);
+  background: linear-gradient(319deg, rgba(132, 139, 30, 1) 0%, rgba(100, 108, 20, 1) 14%, rgba(18, 33, 6, 1) 100%);
 }
 
 .navbar-brand {
