@@ -11,7 +11,7 @@ export class Templates {
               <p>5 likes</p>
             </div>
           </div>
-          <button class="btn btn-outline-secondary shadow m-1 w-100">Comments</button>
+          <button class="btn comment-btn btn-outline-secondary shadow m-1 w-100" data-bs-toggle="modal" data-bs-target="#charModal">Comments</button>
           <button class="btn btn-outline-secondary shadow m-1 w-100">Reservations</button>
         </div>
       </div>

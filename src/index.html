@@ -9,7 +9,7 @@
     <title>Alex Template</title>    
 </head>
 <body>
-  <header>
+  <header class="sticky-top">
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,10 +34,6 @@
       </div>
     </nav>
   </header>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch demo modal
-    </button>
   <section>
     <h2 class="txtAling-Center">Characters</h2>
     <div class="d-flex flex-wrap justify-content-around m-4" id="cardsContainer">
@@ -60,7 +56,7 @@
     </div>
   </footer>
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="charModal" tabindex="-1" aria-labelledby="charModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body d-flex flex-column align-items-center">
@@ -71,7 +67,7 @@
           <h2 id="chr-name" class="my-3">Walter White</h2>
           <div class="row w-100">
             <div id="chr-birthday" class="col-md-6">Birthday: 26/11/1968</div>
-            <div id="chr-status" class="col-md-6">Main Occupation: Professor</div>
+            <div id="chr-occupation" class="col-md-6">Main Occupation: Professor</div>
           </div>
           <div class="row w-100">
             <div id="chr-nickname" class="col-md-6">Nickname: Heisenberg</div>
