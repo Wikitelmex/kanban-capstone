@@ -5,6 +5,8 @@ import { Templates } from './modules/domTemplates.js';
 import { populatePopup } from './modules/popup.js';
 
 const httprequester = new MyHttpRequest('https://www.breakingbadapi.com/api/characters');
+const likesHttpRequester = new MyHttpRequest('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AOlok8LvMamqLq187WOm/likes/');
+
 let myArray = [];
 
 window.refreshData = () => {
@@ -13,6 +15,12 @@ window.refreshData = () => {
     myArray = res;
     myArray.forEach((element) => {
       DomRequest.appendTemplate('cardsContainer', Templates.CharacterCard(element));
+    });
+
+    likesHttpRequester.getAsync().then((res) => {
+      res.forEach((element) => {
+        DomRequest.sustituteTemplate(element.item_id, Templates.likesAmount(element.likes));
+      });
     });
   });
 };
