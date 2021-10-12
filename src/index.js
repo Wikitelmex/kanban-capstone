@@ -12,9 +12,8 @@ let myArray = [];
 const setEventListeners = (myArray) => {
   const commentBtns = document.querySelectorAll('.comment-btn');
   commentBtns.forEach((item, index) => {
-    item.addEventListener('click', () => { 
+    item.addEventListener('click', () => {
       populatePopup(myArray, index);
-      console.log('1234');
     });
   });
 };
