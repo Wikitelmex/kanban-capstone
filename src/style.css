@@ -35,3 +35,18 @@ nav {
 .nav-link:active {
   color: #ffae00 !important;
 }
+
+.w18rem {
+  width: 18rem;
+}
+
+.imgCard {
+  object-fit: contain;
+  position: relative;
+  height: 18rem;
+  width: auto;
+}
+
+.txtAling-Center {
+  text-align: center;
+}
