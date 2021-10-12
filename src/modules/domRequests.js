@@ -14,4 +14,9 @@ export class DomRequest {
     const child = document.querySelector(`#${idChild}`);
     parent.removeChild(child);
   }
+
+  static sustituteTemplate(id = '', newTemplate = '') {
+    const el = document.querySelector(`#${id}`);
+    el.innerHTML = newTemplate;
+  }
 }
