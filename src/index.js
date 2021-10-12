@@ -24,6 +24,18 @@ window.refreshData = () => {
   });
 };
 
+window.addLike = (id = '') => {
+  const obj = { item_id: `item${id}` };
+  likesHttpRequester.postAsync(obj).then(() => {
+    const likeBtn = document.querySelector(`#likeButton${id}`);
+    likeBtn.classList.replace('bi-heart', 'bi-heart-fill');
+    likeBtn.classList.add('text-danger');
+    likeBtn.setAttribute('onclick', '');
+    const likesSpan = document.querySelector(`#item${id}`);
+    likesSpan.innerHTML = `${Number.parseInt(likesSpan.innerHTML, 10) + 1}`;
+  });
+};
+
 window.onload = () => {
   window.refreshData();
 };
