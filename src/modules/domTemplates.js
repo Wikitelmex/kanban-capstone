@@ -8,13 +8,20 @@ export class Templates {
             <h5 class="card-title">${element.name}</h5>
             <div class="d-flex flex-column align-items-center">
               <i class="bi bi-heart"></i>
-              <p>5 likes</p>
+              <p id="item${element.char_id}">0 likes</p>
             </div>
           </div>
           <button class="btn btn-outline-secondary shadow m-1 w-100">Comments</button>
           <button class="btn btn-outline-secondary shadow m-1 w-100">Reservations</button>
         </div>
       </div>
+    `;
+    return res;
+  }
+
+  static likesAmount(likes = 0) {
+    const res = `
+      ${likes} likes
     `;
     return res;
   }

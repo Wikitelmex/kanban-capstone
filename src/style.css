@@ -55,3 +55,8 @@ nav {
 .txtAling-Center {
   text-align: center;
 }
+
+.bi-heart:hover {
+  color: red;
+  font-size: 1.2rem;
+}
