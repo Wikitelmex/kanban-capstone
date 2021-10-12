@@ -9,6 +9,16 @@ const likesHttpRequester = new MyHttpRequest('https://us-central1-involvement-ap
 
 let myArray = [];
 
+const setEventListeners = (myArray) => {
+  const commentBtns = document.querySelectorAll('.comment-btn');
+  commentBtns.forEach((item, index) => {
+    item.addEventListener('click', () => { 
+      populatePopup(myArray, index);
+      console.log('1234');
+    });
+  });
+};
+
 window.refreshData = () => {
   DomRequest.clear('cardsContainer');
   httprequester.getAsync().then((res) => {
@@ -16,6 +26,7 @@ window.refreshData = () => {
     myArray.forEach((element) => {
       DomRequest.appendTemplate('cardsContainer', Templates.CharacterCard(element));
     });
+    setEventListeners(myArray);
 
     likesHttpRequester.getAsync().then((res) => {
       res.forEach((element) => {
@@ -28,11 +39,3 @@ window.refreshData = () => {
 window.onload = () => {
   window.refreshData();
 };
-
-const commentBtns = document.querySelectorAll('.comment-btn');
-commentBtns.forEach((item, index) => {
-  item.addEventListener('click', () => { 
-    populatePopup(myArray, index); 
-    console.log('1234');
-  });
-});
