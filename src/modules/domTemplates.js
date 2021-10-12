@@ -7,8 +7,8 @@ export class Templates {
           <div class="d-flex flex-row justify-content-between">
             <h5 class="card-title">${element.name}</h5>
             <div class="d-flex flex-column align-items-center">
-              <i class="bi bi-heart"></i>
-              <p id="item${element.char_id}">0 likes</p>
+              <i id="likeButton${element.char_id}" class="bi bi-heart" onclick="window.addLike('${element.char_id}')"></i>
+              <p><span id="item${element.char_id}">0</span> likes</p>
             </div>
           </div>
           <button class="btn comment-btn btn-outline-secondary shadow m-1 w-100" data-bs-toggle="modal" data-bs-target="#charModal">Comments</button>
@@ -21,7 +21,7 @@ export class Templates {
 
   static likesAmount(likes = 0) {
     const res = `
-      ${likes} likes
+      ${likes}
     `;
     return res;
   }
