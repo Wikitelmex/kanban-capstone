@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 import { myLocalStorage } from "./modules/myLocalstorage";
 
@@ -8,8 +7,7 @@ function component() {
 
   myLS.save();
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  
 
   return element;
 }
