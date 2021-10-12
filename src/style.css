@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'BreakingBad';
+  src: url('./fonts/breaking-bad.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   background-color: whitesmoke;
 }
@@ -5,4 +12,30 @@ body {
 .logo {
   height: 30px;
   width: auto;
+
+#bb-logo {
+  height: 80px;
+}
+
+nav {
+  background: rgb(132, 139, 30);
+  background: linear-gradient(319deg, rgba(132, 139, 30, 1) 0%, rgba(100, 108, 20, 1) 14%, rgba(18, 33, 6, 1) 100%);
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 46px;
+  font-family: 'BreakingBad', sans-serif;
+}
+
+.nav-link:hover {
+  color: #ffbf00 !important;
+}
+
+.nav-link:active {
+  color: #ffae00 !important;
 }
