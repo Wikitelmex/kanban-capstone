@@ -12,8 +12,7 @@ const populateComments = (id) => {
       DomRequest.appendTemplate('commentsContainer', Templates.commentsSection(comment));
     });
   });
-
-}
+};
 
 const addComment = (id) => {
   const username = document.querySelector('#comment-name');
@@ -22,7 +21,7 @@ const addComment = (id) => {
     const comment = {
       item_id: id,
       username: username.value,
-      comment: content.value
+      comment: content.value,
     };
     const commentHttpRequester = new MyHttpRequest(commentsURL);
     commentHttpRequester.postAsync(comment).then(() => {
@@ -31,7 +30,7 @@ const addComment = (id) => {
       content.value = '';
     });
   }
-}
+};
 
 export const populatePopup = (list, index) => {
   const character = list[index];
@@ -44,7 +43,7 @@ export const populatePopup = (list, index) => {
   document.querySelector('#chr-occupation').innerHTML = mainOccupation;
   document.querySelector('#chr-nickname').innerHTML = character.nickname;
   document.querySelector('#chr-actor').innerHTML = character.portrayed;
-  
+
   populateComments(character.char_id);
 
   DomRequest.clear('comment-btn');
