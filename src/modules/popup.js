@@ -4,6 +4,35 @@ import { Templates } from './domTemplates.js';
 
 const commentsURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AOlok8LvMamqLq187WOm/comments';
 
+const populateComments = (id) => {
+  DomRequest.clear('commentsContainer');
+  const commentHttpRequester = new MyHttpRequest(`${commentsURL}?item_id=${id}`);
+  commentHttpRequester.getAsync().then((comments) => {
+    comments.forEach((comment) => {
+      DomRequest.appendTemplate('commentsContainer', Templates.commentsSection(comment));
+    });
+  });
+
+}
+
+const addComment = (id) => {
+  const username = document.querySelector('#comment-name');
+  const content = document.querySelector('#comment-content');
+  if (username.value !== '' && content.value !== '') {
+    const comment = {
+      item_id: id,
+      username: username.value,
+      comment: content.value
+    };
+    const commentHttpRequester = new MyHttpRequest(commentsURL);
+    commentHttpRequester.postAsync(comment).then(() => {
+      populateComments(id);
+      username.value = '';
+      content.value = '';
+    });
+  }
+}
+
 export const populatePopup = (list, index) => {
   const character = list[index];
   const image = document.querySelector('#chr-img');
@@ -15,12 +44,11 @@ export const populatePopup = (list, index) => {
   document.querySelector('#chr-occupation').innerHTML = mainOccupation;
   document.querySelector('#chr-nickname').innerHTML = character.nickname;
   document.querySelector('#chr-actor').innerHTML = character.portrayed;
-  DomRequest.clear('commentsContainer');
+  
+  populateComments(character.char_id);
 
-  const commentHttpRequester = new MyHttpRequest(`${commentsURL}?item_id=${character.char_id}`);
-  commentHttpRequester.getAsync().then((comments) => {
-    comments.forEach((comment) => {
-      DomRequest.appendTemplate('commentsContainer', Templates.commentsSection(comment));
-    });
-  });
+  DomRequest.clear('comment-btn');
+  DomRequest.appendTemplate('comment-btn', Templates.commentButton());
+  const button = document.querySelector('#comment-submit');
+  button.addEventListener('click', () => { addComment(character.char_id); });
 };

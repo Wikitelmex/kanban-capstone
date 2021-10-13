@@ -46,4 +46,10 @@ export class Templates {
     `;
     return res;
   }
+
+  static commentButton() {
+    const res = '<button id="comment-submit" type="button" class="btn btn-primary">Comment</button>';
+    return res;
+  }
 }
+
