@@ -3,7 +3,7 @@ import { MyHttpRequest } from './modules/httpRequests.js';
 import { DomRequest } from './modules/domRequests.js';
 import { Templates } from './modules/domTemplates.js';
 import { populatePopup } from './modules/popup.js';
-import { elementsCounter } from "./modules/tools";
+import { elementsCounter } from './modules/tools.js';
 
 const httprequester = new MyHttpRequest('https://www.breakingbadapi.com/api/characters');
 const likesHttpRequester = new MyHttpRequest('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AOlok8LvMamqLq187WOm/likes/');
@@ -28,7 +28,7 @@ window.refreshData = () => {
     });
     setEventListeners(myArray);
 
-    const counter = document.querySelector("#charactersCounter");
+    const counter = document.querySelector('#charactersCounter');
     counter.innerHTML = elementsCounter(myArray);
 
     likesHttpRequester.getAsync().then((res) => {
