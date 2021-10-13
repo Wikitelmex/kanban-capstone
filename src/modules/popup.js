@@ -16,7 +16,7 @@ export const populatePopup = (list, index) => {
   document.querySelector('#chr-nickname').innerHTML = character.nickname;
   document.querySelector('#chr-actor').innerHTML = character.portrayed;
   DomRequest.clear('commentsContainer');
-  
+
   const commentHttpRequester = new MyHttpRequest(`${commentsURL}?item_id=${character.char_id}`);
   commentHttpRequester.getAsync().then((comments) => {
     comments.forEach((comment) => {
