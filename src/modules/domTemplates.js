@@ -11,8 +11,8 @@ export class Templates {
               <p><span id="item${element.char_id}">0</span> likes</p>
             </div>
           </div>
-          <button class="btn comment-btn btn-outline-secondary shadow m-1 w-100" data-bs-toggle="modal" data-bs-target="#charModal">Comments</button>
-          <button class="btn btn-outline-secondary shadow m-1 w-100">Reservations</button>
+          <button class="btn comment-btn btn-outline-success shadow m-1 w-100" data-bs-toggle="modal" data-bs-target="#charModal">Comments</button>
+          <button class="btn btn-outline-success shadow m-1 w-100">Reservations</button>
         </div>
       </div>
     `;
@@ -28,7 +28,7 @@ export class Templates {
 
   static failAlert(text = '') {
     const res = `
-        <div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
+        <div class="alert alert-danger alert-dismissible fade show fixed-bottom zindexfront" role="alert">
             <strong>Houston, we have a problem!</strong> ${text}.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
