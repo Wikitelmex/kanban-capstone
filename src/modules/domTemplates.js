@@ -11,7 +11,7 @@ export class Templates {
               <p><span id="item${element.char_id}">0</span> likes</p>
             </div>
           </div>
-          <button class="btn btn-outline-secondary shadow m-1 w-100">Comments</button>
+          <button class="btn comment-btn btn-outline-secondary shadow m-1 w-100" data-bs-toggle="modal" data-bs-target="#charModal">Comments</button>
           <button class="btn btn-outline-secondary shadow m-1 w-100">Reservations</button>
         </div>
       </div>
@@ -33,6 +33,17 @@ export class Templates {
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         `;
+    return res;
+  }
+
+  static commentsSection(comment = {}) {
+    const res = `
+    <p>
+      <i>${comment.creation_date} </i>
+      <b>${comment.username}: </b>
+      <span>${comment.comment}</span>
+    </p>
+    `;
     return res;
   }
 }

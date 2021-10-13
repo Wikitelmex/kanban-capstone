@@ -12,8 +12,6 @@ export class MyHttpRequest {
       try {
         const response = await fetch(this.#url);
         const obj = await response.json();
-        // console.log(obj);
-        // varia.sort((a, b) => b.score - a.score);
         return obj;
       } catch (error) {
         DomRequest.appendTemplate('alert', Templates.failAlert(error));

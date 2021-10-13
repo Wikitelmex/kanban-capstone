@@ -9,7 +9,7 @@
     <title>Alex Template</title>    
 </head>
 <body>
-  <header>
+  <header class="sticky-top">
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,49 @@
       <span class="text-success">2021 all rights reserved.</span>
     </div>
   </footer>
+  <button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#charModal">
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="charModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column align-items-center">          
+          <img id="chr-img" class="imgCard text-center" src="#" alt="">
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>          
+          <h2 id="chr-name" class="my-3"></h2>
+          <div class="row w-100">
+            <div class="col-md-6">
+              <strong>Birthday: </strong> 
+              <span id="chr-birthday"></span>
+            </div>
+            <div class="col-md-6">
+              <strong>Main Occupation: </strong>
+              <span id="chr-occupation"></span>
+            </div>
+          </div>
+          <div class="row w-100">
+            <div class="col-md-6">
+              <strong>Nickname: </strong>
+              <span id="chr-nickname"></span>
+            </div>
+            <div class="col-md-6">
+              <strong>Actor: </strong>
+              <span id="chr-actor"></span>
+            </div>
+          </div>
+          <h3 class="my-3">Comments</h3>
+          <div id="commentsContainer"></div>
+          <h3 class="my-3">Add a comment</h3>
+          <form action="#">
+            <input type="text" class="mb-2" name="name" id="comment-name" placeholder="Your name">
+            <textarea name="insights" id="comment-insights" cols="30" rows="5" placeholder="Your insights"></textarea>
+            <br>
+            <button type="button" class="btn btn-primary">Comment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
