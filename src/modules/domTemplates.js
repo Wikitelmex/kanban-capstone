@@ -35,4 +35,15 @@ export class Templates {
         `;
     return res;
   }
+
+  static commentsSection(comment = {}) {
+    const res = `
+    <p>
+      <i>${comment.creation_date} </i>
+      <b>${comment.username}: </b>
+      <span>${comment.comment}</span>
+    </p>
+    `;
+    return res;
+  }
 }
