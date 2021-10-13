@@ -1,3 +1,3 @@
 export function elementsCounter(elements = []) {
-    return elements.length;
+  return elements.length;
 }
