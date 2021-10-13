@@ -1,8 +1,13 @@
+
 @font-face {
   font-family: 'BreakingBad';
   src: url('./fonts/breaking-bad.otf');
   font-weight: 600;
   font-style: normal;
+}
+
+.zindexfront {
+  z-index: 9999;
 }
 
 body {

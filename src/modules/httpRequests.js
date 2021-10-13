@@ -28,8 +28,7 @@ export class MyHttpRequest {
             'Content-type': 'application/json; charset=UTF-8',
           },
         });
-        const obj = await response.json();
-        return obj;
+        return response.status;
       } catch (error) {
         DomRequest.appendTemplate('alert', Templates.failAlert(error));
         return false;
