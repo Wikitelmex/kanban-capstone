@@ -1,6 +1,7 @@
 import { MyHttpRequest } from './httpRequests.js';
 import { DomRequest } from './domRequests.js';
 import { Templates } from './domTemplates.js';
+import { elementsCounter } from './tools.js';
 
 const commentsURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AOlok8LvMamqLq187WOm/comments';
 
@@ -11,6 +12,8 @@ const populateComments = (id) => {
     comments.forEach((comment) => {
       DomRequest.appendTemplate('commentsContainer', Templates.commentsSection(comment));
     });
+    const counter = document.querySelector('#comments-counter');
+    counter.textContent = elementsCounter(comments);
   });
 };
 
