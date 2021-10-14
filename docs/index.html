@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Breaking Bad</title>    
+<script defer src="main.js"></script></head>
+<body>
+
+  <header class="sticky-top">
+    <nav id="main-navbar" class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="bi bi-list text-light h2"></i></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <a class="navbar-brand " href="./index.html">
+            <img class="mobile-hide" id="bb-logo" src="29aaf6573e05558f8133.png" alt="Breaking Bad Logo">
+          </a>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item px-4">
+              <a class="nav-link" href="#">Characters</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="#">episOdes</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="#">quoteS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <h1 class="text-center mt-3">Breaking Bad</h1>
+    <h2 class="text-center"><i>The store</i></h2>
+    <h5 class="ms-2">Total Characters: <span id="charactersCounter">Loading...</span></h5>
+    <div class="d-flex flex-wrap justify-content-around m-4" id="cardsContainer">
+      <!--Dynamic content here-->
+    </div>
+  </section>
+
+  <!--#region Alerts -->
+  <div id='alert'>
+
+  </div>
+  <!--#endregion -->
+  <footer class="footer mt-auto bg-light fixed-bottom d-flex flex-row justify-content-between align-items-center flex-wrap">
+    <img class="logo ms-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Breaking_Bad_logo.svg/554px-Breaking_Bad_logo.svg.png" alt="">
+    <div class="container col-7">
+      <span class="text-success"><b>This web created by Nacho & Alex. Serie created by Vince Gilligan</b></span>
+    </div>
+    <div class="container col-3">
+      <span class="text-success">2021 all rights reserved.</span>
+    </div>
+  </footer>
+  <!-- Modal -->
+  <div class="modal fade" id="charModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column align-items-center">          
+          <img id="chr-img" class="imgCard text-center" src="#" alt="">
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>          
+          <h2 id="chr-name" class="my-3">test text</h2>
+          <div class="row w-100">
+            <div class="col-md-6">
+              <strong>Birthday: </strong> 
+              <span id="chr-birthday"></span>
+            </div>
+            <div class="col-md-6">
+              <strong>Main Occupation: </strong>
+              <span id="chr-occupation"></span>
+            </div>
+          </div>
+          <div class="row w-100">
+            <div class="col-md-6">
+              <strong>Nickname: </strong>
+              <span id="chr-nickname"></span>
+            </div>
+            <div class="col-md-6">
+              <strong>Actor: </strong>
+              <span id="chr-actor"></span>
+            </div>
+          </div>
+          <h3 class="mt-4 mb-3">Comments(<span id="comments-counter">0</span>)</h3>
+          <div id="commentsContainer"></div>
+          <h3 class="my-3">Add a comment</h3>
+          <form action="#">
+            <input id="comment-name" type="text" class="mb-2" name="name" placeholder="Your name" required>
+            <br>
+            <textarea id="comment-content" name="comment-content" cols="30" rows="5" placeholder="Your comment" required></textarea>
+            <br>
+            <div id="comment-btn"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
