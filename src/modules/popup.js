@@ -1,16 +1,20 @@
 import { MyHttpRequest } from './httpRequests.js';
 import { DomRequest } from './domRequests.js';
 import { Templates } from './domTemplates.js';
+import { elementsCounter } from './tools.js';
 
 const commentsURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AOlok8LvMamqLq187WOm/comments';
 
 const populateComments = (id) => {
   DomRequest.clear('commentsContainer');
   const commentHttpRequester = new MyHttpRequest(`${commentsURL}?item_id=${id}`);
+  const counter = document.querySelector('#comments-counter');
+  counter.textContent = 0;
   commentHttpRequester.getAsync().then((comments) => {
     comments.forEach((comment) => {
       DomRequest.appendTemplate('commentsContainer', Templates.commentsSection(comment));
     });
+    counter.textContent = elementsCounter(comments);
   });
 };
 
