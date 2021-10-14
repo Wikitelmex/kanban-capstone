@@ -4,7 +4,7 @@
 
 > This App consumes an API with the info of the breaking bad, here, we're presenting the characters, and in other API, we're posting and reading the comments and likes.
 
-![screenshot](./screenshot.png)
+![image](https://user-images.githubusercontent.com/59240486/137384970-79db261f-91b7-4216-93b8-d02fb302eb36.png)
 
 The APIs consumed are https://www.breakingbadapi.com/api/characters, https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AOlok8LvMamqLq187WOm/likes/.
 
