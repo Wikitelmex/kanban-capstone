@@ -8,11 +8,12 @@ const commentsURL = 'https://us-central1-involvement-api.cloudfunctions.net/caps
 const populateComments = (id) => {
   DomRequest.clear('commentsContainer');
   const commentHttpRequester = new MyHttpRequest(`${commentsURL}?item_id=${id}`);
+  const counter = document.querySelector('#comments-counter');
+  counter.textContent = 0;
   commentHttpRequester.getAsync().then((comments) => {
     comments.forEach((comment) => {
       DomRequest.appendTemplate('commentsContainer', Templates.commentsSection(comment));
     });
-    const counter = document.querySelector('#comments-counter');
     counter.textContent = elementsCounter(comments);
   });
 };
