@@ -1,3 +1,1 @@
-export function elementsCounter(elements = []) {
-  return elements.length;
-}
+export const elementsCounter = (elements = []) => elements.length;
