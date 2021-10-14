@@ -1,3 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500;700&display=swap');
+
+@font-face {
+  font-family: 'BreakingBad';
+  src: url('./fonts/breaking-bad.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.zindexfront {
+  z-index: 9999;
+}
+
 body {
   background-color: whitesmoke;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Inknut Antiqua', serif;
+  color: black;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.logo {
+  height: 30px;
+  width: 0;
+}
+
+.mobile-hide {
+  display: none;
+}
+
+.navbar-collapse {
+  margin-left: 0;
+  margin-right: 0;
+  background: rgba(18, 33, 6, 1);
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+@media only screen and (min-width: 975px) {
+  .mobile-hide {
+    display: block;
+  }
+
+  .navbar-collapse {
+    margin-left: 0;
+    margin-right: 0;
+    background: transparent;
+  }
+}
+
+#bb-logo {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 105px;
+  padding: 12px;
+  border-bottom-right-radius: 50%;
+  background-color: rgba(18, 33, 6, 1);
+}
+
+nav {
+  height: 60px;
+  background: rgba(18, 33, 6, 1);
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 46px;
+  font-family: 'BreakingBad', sans-serif;
+}
+
+.nav-link:hover {
+  color: #ffbf00 !important;
+}
+
+.nav-link:active {
+  color: #ffae00 !important;
+}
+
+.w18rem {
+  width: 18rem;
+}
+
+.imgCard {
+  object-fit: contain;
+  position: relative;
+  height: 18rem;
+  width: auto;
+}
+
+.bi-heart:hover {
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
