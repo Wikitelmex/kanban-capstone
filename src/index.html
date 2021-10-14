@@ -36,8 +36,9 @@
     </nav>
   </header>
   <section>
-    <h2 class="txtAling-Center">Characters</h2>
-    <h3 class="ms-2">Total of Characters: <span id="charactersCounter">Loading...</span></h3>
+    <h1 class="text-center mt-3">Breaking Bad</h1>
+    <h2 class="text-center"><i>The store</i></h2>
+    <h5 class="ms-2">Total Characters: <span id="charactersCounter">Loading...</span></h5>
     <div class="d-flex flex-wrap justify-content-around m-4" id="cardsContainer">
       <!--Dynamic content here-->
     </div>
@@ -48,7 +49,7 @@
 
   </div>
   <!--#endregion -->
-  <footer class="footer mt-auto py-3 bg-light fixed-bottom d-flex flex-row justify-content-between flex-wrap">
+  <footer class="footer mt-auto bg-light fixed-bottom d-flex flex-row justify-content-between align-items-center flex-wrap">
     <img class="logo ms-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Breaking_Bad_logo.svg/554px-Breaking_Bad_logo.svg.png" alt="">
     <div class="container col-7">
       <span class="text-success"><b>This web created by Nacho & Alex. Serie created by Vince Gilligan</b></span>
@@ -85,11 +86,12 @@
               <span id="chr-actor"></span>
             </div>
           </div>
-          <h3 class="my-3">Comments(<span id="comments-counter"></span>)</h3>
+          <h3 class="mt-4 mb-3">Comments(<span id="comments-counter">0</span>)</h3>
           <div id="commentsContainer"></div>
           <h3 class="my-3">Add a comment</h3>
           <form action="#">
             <input id="comment-name" type="text" class="mb-2" name="name" placeholder="Your name" required>
+            <br>
             <textarea id="comment-content" name="comment-content" cols="30" rows="5" placeholder="Your comment" required></textarea>
             <br>
             <div id="comment-btn"></div>

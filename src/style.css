@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500;700&display=swap');
 
 @font-face {
   font-family: 'BreakingBad';
@@ -12,6 +13,18 @@
 
 body {
   background-color: whitesmoke;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Inknut Antiqua', serif;
+  color: black;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 700;
 }
 
 .logo {
@@ -57,11 +70,8 @@ nav {
   width: auto;
 }
 
-.txtAling-Center {
-  text-align: center;
-}
-
 .bi-heart:hover {
   color: red;
   font-size: 1.2rem;
+  cursor: pointer;
 }
