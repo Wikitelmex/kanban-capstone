@@ -1,53 +1,48 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Breaking Bad Api project
 
-> One paragraph statement about the project.
+> This App consumes an API with the info of the breaking bad, here, we're presenting the characters, and in other API, we're posting and reading the comments and likes.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./screenshot.png)
 
-Additional description about the project and its features.
+The APIs consumed are https://www.breakingbadapi.com/api/characters, https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AOlok8LvMamqLq187WOm/likes/.
 
 ## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
+- Javascrip
+- CSS
+- HTML
+- Bootstrap
 
 ## Live Demo
-
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://wikitelmex.github.io/kanban-capstone/)
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+Before we start, make sure you fit the prerequisites, the source code is inside the folder SRC/ and the built code used to the live demo is inside of DOCS/
 
 ### Prerequisites
 - npm installed
 - VSCode
 
 ### Setup
-- git clone https://github.com/Wikitelmex/CRUDClass-webpack-linters-jest
+- git clone https://github.com/Wikitelmex/kanban-capstone.git
   
 ### Install
 - `npm install`
 - `npm install --also=dev` (to install the dev dependencies, like webpack)
 
 ### Usage
+- `npm run start` from VSCode
+- or double click to index.html inside the folder DOCS/ to run directly
 
 ### Run tests
+- `npm run tests`
 
 ### Deployment
-
-
+- `npm run build` and update github pages
 
 ## Authors
-
 👤 **Nacho Sala**
 
 - GitHub: [@nachosala89](https://github.com/nachosala89)
@@ -62,21 +57,13 @@ To get a local copy up and running follow these simple example steps.
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/alejandro-castillo-6849131a9/)
 
 ## 🤝 Contributing
-
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Wikitelmex/kanban-capstone/issues).
 
 ## Show your support
-
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
-
 This project is [MIT](./MIT.md) licensed.
