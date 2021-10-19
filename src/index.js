@@ -2,7 +2,7 @@ import './style.css';
 import { MyHttpRequest } from './modules/httpRequests.js';
 import { DomRequest } from './modules/domRequests.js';
 import { Templates } from './modules/domTemplates.js';
-import { populatePopup } from './modules/popup.js';
+import { populatePopup, populatePopupReservation } from './modules/popup.js';
 import { elementsCounter } from './modules/tools.js';
 
 const httprequester = new MyHttpRequest('https://www.breakingbadapi.com/api/characters');
@@ -11,12 +11,22 @@ const likesHttpRequester = new MyHttpRequest('https://us-central1-involvement-ap
 let myArray = [];
 
 const setEventListeners = (myArray) => {
+
   const commentBtns = document.querySelectorAll('.comment-btn');
   commentBtns.forEach((item, index) => {
     item.addEventListener('click', () => {
       populatePopup(myArray, index);
     });
   });
+
+  const reservationBtns = document.querySelectorAll('.reservation-btn');
+  reservationBtns.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      console.log(myArray, index);
+      populatePopupReservation(myArray, index);
+    });
+  });
+
 };
 
 window.refreshData = () => {
